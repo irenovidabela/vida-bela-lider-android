@@ -1,0 +1,16 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'br.com.vidabela.lider'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "br.com.vidabela.lider"
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+    }
+}
