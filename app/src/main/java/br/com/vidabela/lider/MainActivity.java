@@ -9,6 +9,15 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.Bundle;
+import android.os.Build;
+import android.provider.MediaStore;
+import android.content.ContentValues;
+import android.webkit.JavascriptInterface;
+import android.util.Base64;
+import android.widget.Toast;
+import java.io.OutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import android.webkit.GeolocationPermissions;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -33,7 +42,7 @@ public class MainActivity extends Activity {
         settings.setDatabaseEnabled(true);
         settings.setGeolocationEnabled(true);
         settings.setJavaScriptCanOpenWindowsAutomatically(true);
-        settings.setSupportMultipleWindows(false);
+        settings.setSupportMultipleWindows(false);\n\n        webView.addJavascriptInterface(new AndroidDownloader(), "AndroidDownloader");
 
         webView.setWebViewClient(new WebViewClient() {
             @Override
